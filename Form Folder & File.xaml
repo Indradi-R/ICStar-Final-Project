@@ -1,0 +1,157 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Form_Folder___File" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="pathPoFile" Type="OutArgument(x:String)" />
+    <x:Property Name="pathTimesheet" Type="OutArgument(x:String)" />
+    <x:Property Name="pathDraftCac" Type="OutArgument(x:String)" />
+    <x:Property Name="pathOutput" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>647,830</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Form_Folder___File_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="28">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Form_Folder___File" sap:VirtualizedContainerService.HintSize="553,765" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="formOutput" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" CreateFormId="28b59745-16ba-41a9-bfff-2c75b9277ca3" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" Dismissed="{x:Null}" DisplayName="Create Form" EnableAccessibility="False" FormFieldsInputData="{x:Null}" FormFieldsOutputData="[formOutput]" FormHeight="400" FormSchema="%[{&quot;label&quot;:&quot;Select PO File&quot;,&quot;customClass&quot;:&quot;filePath&quot;,&quot;showAllFileTypes&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;selectPoFile&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select &quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;,&quot;filePathExtension&quot;:[{&quot;displayName&quot;:&quot;Office Files&quot;,&quot;value&quot;:&quot;*.doc;*.xls;*.ppt;*.pdf&quot;}]},{&quot;label&quot;:&quot;Select Folder for Timesheet&quot;,&quot;customClass&quot;:&quot;folderPath&quot;,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;selectFolderForTimesheet&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select &quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;},{&quot;label&quot;:&quot;Select File Draft CAC&quot;,&quot;customClass&quot;:&quot;filePath&quot;,&quot;showAllFileTypes&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;selectFileDraftCac&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select &quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;,&quot;filePathExtension&quot;:[{&quot;displayName&quot;:&quot;Office Files&quot;,&quot;value&quot;:&quot;*.xlsx;*.xls&quot;}]},{&quot;label&quot;:&quot;Select Folder for the Output File&quot;,&quot;customClass&quot;:&quot;folderPath&quot;,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;selectFolderForTheOutputFile&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select &quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100270&quot;,&quot;Name&quot;:&quot;United&quot;,&quot;BaseCss&quot;:&quot;./assets/css/themes/united.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;./assets/themeicons/united.png&quot;,&quot;OverrideCssUrl&quot;:&quot;&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormTitle="Select File/Folder" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="511,675" IconPath="{x:Null}" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" LocalCSSFilePath="{x:Null}" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="True" SelectedButton="{x:Null}" StartAsMinimized="False" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}">
+      <ufa:FormActivity.Body>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473,539" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="formVariable" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeserializeJson x:TypeArguments="scg:Dictionary(x:String, x:String)" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="431,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[formVariable]" JsonString="[formOutput]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,97" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[formVariable(&quot;selectPoFile&quot;)]" TextWriter="{x:Null}" />
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,203" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[pathPoFile]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[formVariable("selectPoFile").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[pathTimesheet]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[formVariable("selectFolderForTimesheet").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[pathDraftCac]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[formVariable("selectFileDraftCac").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[pathOutput]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[formVariable("selectFolderForTheOutputFile").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+          </Sequence>
+        </ActivityAction>
+      </ufa:FormActivity.Body>
+      <ufa:FormActivity.DelayBody>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </ActivityAction>
+      </ufa:FormActivity.DelayBody>
+      <ufa:FormActivity.FormFieldsCollection>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ufa:FormActivity.FormFieldsCollection>
+    </ufa:FormActivity>
+  </Sequence>
+</Activity>
